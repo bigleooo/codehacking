@@ -33,20 +33,9 @@ class User extends Authenticatable
     }
 
 
+    public function photo() {
 
-    public function activeyesno($active) {
-
-        if ($active) {
-
-            if ($active = 1) {
-
-                return "Active";
-
-            }
-
-        }
-
-        return "Not Active";
+        return $this->belongsTo('App\Photo');
 
     }
 
