@@ -12,7 +12,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'role_id', 'photo_id','is_active',
     ];
 
     /**
@@ -34,6 +34,21 @@ class User extends Authenticatable
 
 
 
+    public function activeyesno($active) {
+
+        if ($active) {
+
+            if ($active = 1) {
+
+                return "Active";
+
+            }
+
+        }
+
+        return "Not Active";
+
+    }
 
 
 
